@@ -1,0 +1,18 @@
+.addBtn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 5px;
+  padding-right: 0px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f7f4f4;
+}
+
+.addBtn_downArrow {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #cdcdcd;
+  margin-left: 5px;
+}

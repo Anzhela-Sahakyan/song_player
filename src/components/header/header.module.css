@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  background-color: #ececec;
+  border-radius: 8px;
+  height: 35px;
+}
+
+.header_btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header_sort_search {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
