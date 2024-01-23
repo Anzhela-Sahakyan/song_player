@@ -1,12 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/header/Header";
+import MusicPlayer from "./components/musicPlayer/MusicPlayer";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <MusicPlayer />
     </div>
   );
 }

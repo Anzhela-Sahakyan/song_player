@@ -1,0 +1,31 @@
+.songlist_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.first_empty {
+  flex-grow: 1;
+}
+
+.song_name,
+.artist_name {
+  flex-grow: 4;
+}
+.track_number {
+  flex-grow: 1;
+}
+
+.last_empty {
+  flex-grow: 2.5;
+}
+.title_items {
+  display: flex;
+  align-items: center;
+  background-color: #eeeeee;
+  height: 35px;
+  padding-left: 10px;
+  color: #908799;
+  font-weight: bold;
+}

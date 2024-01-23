@@ -1,0 +1,40 @@
+.song_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.drag_play_icons {
+  /* display: flex; */
+  flex-grow: 1;
+  /* justify-content: flex-start; */
+}
+
+.song_name,
+.artist_name {
+  /* display: flex; */
+  flex-grow: 4;
+  /* justify-content: flex-start; */
+}
+
+.track_number {
+  /* display: flex; */
+  flex-grow: 1;
+  /* justify-content: flex-start; */
+}
+
+.right_side_icons {
+  /* display: flex; */
+  flex-grow: 2.5;
+  /* justify-content: flex-start; */
+}
+
+.song_row_items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 35px;
+  color: #908799;
+  font-weight: bold;
+}
