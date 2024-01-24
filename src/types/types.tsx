@@ -4,3 +4,10 @@ export default interface ISong {
   trackNumber: number;
   file?: File;
 }
+
+export interface IButtonProps {
+  children: React.ReactNode;
+  label: string;
+  className?: string;
+  onClick: () => void;
+}

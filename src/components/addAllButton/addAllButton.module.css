@@ -4,15 +4,21 @@
   font-size: 16px;
   gap: 5px;
   padding-right: 0px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
-  background-color: #f7f4f4;
+  background-color: var(--items-bg-color);
+  transition: 0.5s ease-out;
 }
 
 .addBtn_downArrow {
   display: flex;
   align-items: center;
-  border-left: 1px solid #cdcdcd;
+  border-left: 1px solid var(--border-color);
   margin-left: 5px;
+}
+
+.addBtn:hover {
+  background-color: var(--hover-color);
+  color: white;
 }

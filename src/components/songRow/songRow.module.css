@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 2px;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease-out;
   cursor: pointer;
 }
 
@@ -36,14 +36,14 @@
   align-items: center;
   height: 35px;
   padding: 10px;
-  color: #908799;
+  color: var(--font--color);
   font-weight: bold;
 }
 .song_row:hover {
-  background-color: antiquewhite;
+  background-color: var(--row-hover-color);
 }
 
 .right_side_icons:hover,
 .drag_play_icons:hover {
-  color: rgb(34, 36, 36);
+  color: var(--hover-color);
 }

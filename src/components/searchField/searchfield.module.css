@@ -1,12 +1,17 @@
 .searchField {
   display: flex;
   align-items: center;
-  border: 1px solid #c0c0c0;
+  border: 1px solid var(--border-color);
   border-radius: 50px;
   padding: 3px 8px;
   width: 200px;
   height: 30px;
-  color: #6d6b6b;
+  color: var(--font--color);
   cursor: text;
-  background-color: #f7f4f4;
+  background-color: var(--items-bg-color);
+  transition: 0.5s ease-out;
+}
+
+.searchField:hover {
+  border: 1.5px solid var(--hover-color);
 }

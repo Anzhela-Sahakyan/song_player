@@ -8,4 +8,10 @@
   padding: 3px;
   cursor: pointer;
   background-color: #f7f4f4;
+  transition: 0.5s ease-out;
+}
+
+.sort:hover {
+  background-color: var(--hover-color);
+  color: white;
 }

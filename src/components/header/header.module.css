@@ -6,8 +6,8 @@
 
   padding: 10px;
   margin: 10px;
-  border: 1px solid #c0c0c0;
-  background-color: #ececec;
+  border: 1px solid var(--border-color);
+  background-color: var(--main-color);
   border-radius: 8px;
   height: 35px;
 }
