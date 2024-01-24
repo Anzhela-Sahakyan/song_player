@@ -5,12 +5,31 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import DoneIcon from "@mui/icons-material/Done";
 import { IoMdShareAlt } from "react-icons/io";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
-import styles from "./songRow.module.css";
 import { combineClasses } from "../../utils/styleUtils";
+import DisplayMessage from "../displayMessage/DisplayMessage";
+import { useEffect, useState } from "react";
+import styles from "./songRow.module.css";
 
 export default function SongRow({ song }: { song: ISong }) {
   const { songName, artistName, trackNumber } = song;
+
+  const [showMessage, setShowMessage] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleIconClick = (message: string) => {
+    setShowMessage(true);
+    setMessage(message);
+  };
+  useEffect(() => {
+    if (showMessage) {
+      const timeoutId = setTimeout(() => {
+        setShowMessage(false);
+        setMessage("");
+      }, 3000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showMessage]);
+
   return (
     <div>
       <div className={combineClasses(styles.song_row)}>
@@ -20,8 +39,12 @@ export default function SongRow({ song }: { song: ISong }) {
             styles.song_row_items
           )}
         >
-          <DragIndicatorIcon />
-          <PlayArrowIcon />
+          <DragIndicatorIcon
+            onClick={() => handleIconClick("Drag Icon clicked")}
+          />
+          <PlayArrowIcon
+            onClick={() => handleIconClick(" Play Icon clicked")}
+          />
         </div>
         <div
           className={combineClasses(styles.song_name, styles.song_row_items)}
@@ -44,12 +67,17 @@ export default function SongRow({ song }: { song: ISong }) {
             styles.song_row_items
           )}
         >
-          <FavoriteIcon />
-          <DoneIcon />
-          <IoMdShareAlt />
-          <ArrowDropDownIcon />
+          <FavoriteIcon onClick={() => handleIconClick("Added to favourits")} />
+          <DoneIcon onClick={() => handleIconClick(" The song is done")} />
+          <IoMdShareAlt
+            onClick={() => handleIconClick(" The song is shared")}
+          />
+          <ArrowDropDownIcon
+            onClick={() => handleIconClick("Details are shown")}
+          />
         </div>
       </div>
+      {showMessage && <DisplayMessage message={message} />}
     </div>
   );
 }
