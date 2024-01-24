@@ -1,10 +1,8 @@
-import { useState } from "react";
 import ISong from "../../types/types";
 import { combineClasses } from "../../utils/styleUtils";
 import SongRow from "../songRow/SongRow";
 
 import styles from "./songList.module.css";
-import DisplayMessage from "../displayMessage/DisplayMessage";
 
 export default function SongList({ songList }: { songList: ISong[] }) {
   const songRows = songList.map((song) => (

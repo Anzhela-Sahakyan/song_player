@@ -77,7 +77,9 @@ export default function SongRow({ song }: { song: ISong }) {
           />
         </div>
       </div>
-      {showMessage && <DisplayMessage message={message} />}
+      <div className={styles.message}>
+        {showMessage && <DisplayMessage message={message} />}
+      </div>
     </div>
   );
 }

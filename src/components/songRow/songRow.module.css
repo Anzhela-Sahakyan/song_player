@@ -20,15 +20,15 @@
 
 .track_number {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-grow: 1;
 }
 
 .right_side_icons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-grow: 2.5;
-  gap: 3px;
+  gap: 10px;
 }
 
 .song_row_items {
@@ -46,4 +46,10 @@
 .right_side_icons:hover,
 .drag_play_icons:hover {
   color: var(--hover-color);
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
