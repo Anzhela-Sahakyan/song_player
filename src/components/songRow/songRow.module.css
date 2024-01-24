@@ -3,38 +3,47 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 2px;
+  transition: 0.5s ease-in;
+  cursor: pointer;
 }
 
 .drag_play_icons {
-  /* display: flex; */
   flex-grow: 1;
-  /* justify-content: flex-start; */
 }
 
 .song_name,
 .artist_name {
-  /* display: flex; */
+  display: flex;
+  justify-content: flex-start;
   flex-grow: 4;
-  /* justify-content: flex-start; */
 }
 
 .track_number {
-  /* display: flex; */
+  display: flex;
+  justify-content: flex-start;
   flex-grow: 1;
-  /* justify-content: flex-start; */
 }
 
 .right_side_icons {
-  /* display: flex; */
+  display: flex;
+  justify-content: flex-start;
   flex-grow: 2.5;
-  /* justify-content: flex-start; */
+  gap: 3px;
 }
 
 .song_row_items {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   height: 35px;
+  padding: 10px;
   color: #908799;
   font-weight: bold;
+}
+.song_row:hover {
+  background-color: antiquewhite;
+}
+
+.right_side_icons:hover,
+.drag_play_icons:hover {
+  color: rgb(34, 36, 36);
 }
