@@ -6,19 +6,19 @@
 }
 
 .first_empty {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .song_name,
 .artist_name {
-  flex-grow: 4;
+  flex: 4;
 }
 .track_number {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .last_empty {
-  flex-grow: 2.5;
+  flex: 2.5;
 }
 .title_items {
   display: flex;

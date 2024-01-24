@@ -1,6 +1,11 @@
-import { IButtonProps } from "../../types/types";
+interface IButtonProps {
+  children: React.ReactNode;
+  label: string;
+  className?: string;
+  onClick: () => void;
+}
 
-export default function Button({
+export default function HeaderButton({
   label,
   onClick,
   children,

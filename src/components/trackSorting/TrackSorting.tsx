@@ -1,14 +1,35 @@
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 import styles from "./trackSorting.module.css";
+import { ESortOption } from "../../types/filterTypes";
 
-export default function TrackSorting() {
+interface TrackSortingProps {
+  sort: ESortOption;
+  setSort: (sort: ESortOption) => void;
+}
+
+export default function TrackSorting({ setSort, sort }: TrackSortingProps) {
   return (
-    <div className={styles.sort}>
+    <div
+      onClick={() =>
+        setSort(
+          sort === ESortOption.TrackNumberAsc
+            ? ESortOption.TrackNumberDes
+            : ESortOption.TrackNumberAsc
+        )
+      }
+      className={styles.sort}
+    >
       <SwapVertIcon />
       Track Number
-      <ArrowDropDownIcon />
+      {sort === ESortOption.TrackNumberAsc ? (
+        <ArrowDropUpIcon />
+      ) : (
+        <ArrowDropDownIcon />
+      )}
     </div>
   );
 }
+//FORMAN

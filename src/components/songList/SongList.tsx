@@ -1,4 +1,4 @@
-import ISong from "../../types/types";
+import ISong from "../../types/songTypes";
 import { combineClasses } from "../../utils/styleUtils";
 import SongRow from "../songRow/SongRow";
 

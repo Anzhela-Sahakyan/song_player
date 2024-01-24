@@ -1,4 +1,4 @@
-import ISong from "../../types/types";
+import ISong from "../../types/songTypes";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -68,7 +68,7 @@ export default function SongRow({ song }: { song: ISong }) {
           )}
         >
           <FavoriteIcon onClick={() => handleIconClick("Added to favourits")} />
-          <DoneIcon onClick={() => handleIconClick(" The song is done")} />
+          <DoneIcon onClick={() => handleIconClick(" The song is selected")} />
           <IoMdShareAlt
             onClick={() => handleIconClick(" The song is shared")}
           />

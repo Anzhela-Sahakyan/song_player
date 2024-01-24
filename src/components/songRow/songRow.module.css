@@ -8,26 +8,26 @@
 }
 
 .drag_play_icons {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .song_name,
 .artist_name {
   display: flex;
   justify-content: flex-start;
-  flex-grow: 4;
+  flex: 4;
 }
 
 .track_number {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .right_side_icons {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 2.5;
+  flex: 2.5;
   gap: 10px;
 }
 
