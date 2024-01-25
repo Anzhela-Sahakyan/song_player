@@ -4,7 +4,7 @@ import { songs } from "../../data";
 import { useMemo, useState } from "react";
 import { ESortOption } from "../../types/filterTypes";
 import filterSongList from "../../utils/sortUtils";
-import AddSongBtn from "../songUpload/addSongBtn/AddSongBtn";
+import AddSongBtn from "../musicUpload/addSongBtn/AddSongBtn";
 
 export default function MusicPlayer() {
   const [searchQuery, setSearchQuery] = useState("");

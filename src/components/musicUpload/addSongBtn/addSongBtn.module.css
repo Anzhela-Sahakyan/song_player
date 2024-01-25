@@ -1,3 +1,10 @@
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 .addBtn {
   width: 150px;
   height: 40px;
@@ -15,9 +22,4 @@
   color: white;
   width: 155px;
   height: 45px;
-}
-
-.btnContainer {
-  display: flex;
-  justify-content: center;
 }

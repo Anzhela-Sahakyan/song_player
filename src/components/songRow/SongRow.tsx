@@ -8,6 +8,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { combineClasses } from "../../utils/styleUtils";
 import DisplayMessage from "../displayMessage/DisplayMessage";
 import { useEffect, useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
 import styles from "./songRow.module.css";
 
 export default function SongRow({ song }: { song: ISong }) {
@@ -25,7 +26,7 @@ export default function SongRow({ song }: { song: ISong }) {
       const timeoutId = setTimeout(() => {
         setShowMessage(false);
         setMessage("");
-      }, 3000);
+      }, 1000);
       return () => clearTimeout(timeoutId);
     }
   }, [showMessage]);
