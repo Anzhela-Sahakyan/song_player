@@ -1,10 +1,17 @@
 import ISong from "../../types/songTypes";
 import { combineClasses } from "../../utils/styleUtils";
 import SongRow from "../songRow/SongRow";
+import DraggableList from "../DraggableSongList/DraggableSongList";
 
 import styles from "./songList.module.css";
 
-export default function SongList({ songList }: { songList: ISong[] }) {
+export default function SongList({
+  songList,
+  setSongList,
+}: {
+  songList: ISong[];
+  setSongList: (songList: ISong[]) => void;
+}) {
   const songRows = songList.map((song) => (
     <SongRow song={song} key={song.trackNumber} />
   ));
@@ -30,7 +37,7 @@ export default function SongList({ songList }: { songList: ISong[] }) {
           className={combineClasses(styles.last_empty, styles.title_items)}
         />
       </div>
-      <div>{songRows}</div>
+      <DraggableList songList={songList} setSongList={setSongList} />
     </div>
   );
 }

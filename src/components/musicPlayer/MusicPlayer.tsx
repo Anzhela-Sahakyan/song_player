@@ -28,7 +28,7 @@ export default function MusicPlayer() {
         setSort={setSort}
         sort={sort}
       />
-      <SongList songList={filteredSongList} />
+      <SongList setSongList={setSongList} songList={songList} />
       <AddSongBtn />
     </div>
   );

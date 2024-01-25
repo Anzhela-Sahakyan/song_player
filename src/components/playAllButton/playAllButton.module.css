@@ -8,7 +8,7 @@
   border-radius: 4px;
   cursor: pointer;
   background-color: var(--items-bg-color);
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .playBtn_downArrow {

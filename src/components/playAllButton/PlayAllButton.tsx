@@ -1,7 +1,7 @@
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-import styles from "./playAssButton.module.css";
+import styles from "./playAllButton.module.css";
 
 export default function () {
   return (

@@ -7,7 +7,7 @@
   color: var(--font--color);
   cursor: text;
   background-color: var(--items-bg-color);
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
   padding-left: 35px;
 }
 

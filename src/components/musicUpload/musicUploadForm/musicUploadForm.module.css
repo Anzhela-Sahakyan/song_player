@@ -19,7 +19,7 @@
   color: var(--font--color);
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .fileName {
@@ -35,7 +35,7 @@
   color: var(--font--color);
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .uploadFormBtns:hover {
   background-color: var(--hover-color);
