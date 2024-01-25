@@ -40,9 +40,11 @@ export default function SongRow({ song }: { song: ISong }) {
           )}
         >
           <DragIndicatorIcon
+            className={styles.icon}
             onClick={() => handleIconClick("Drag Icon clicked")}
           />
           <PlayArrowIcon
+            className={styles.icon}
             onClick={() => handleIconClick(" Play Icon clicked")}
           />
         </div>
@@ -67,12 +69,20 @@ export default function SongRow({ song }: { song: ISong }) {
             styles.song_row_items
           )}
         >
-          <FavoriteIcon onClick={() => handleIconClick("Added to favourits")} />
-          <DoneIcon onClick={() => handleIconClick(" The song is selected")} />
+          <FavoriteIcon
+            className={styles.icon}
+            onClick={() => handleIconClick("Added to favourits")}
+          />
+          <DoneIcon
+            className={styles.icon}
+            onClick={() => handleIconClick(" The song is selected")}
+          />
           <IoMdShareAlt
+            className={styles.icon}
             onClick={() => handleIconClick(" The song is shared")}
           />
           <ArrowDropDownIcon
+            className={styles.icon}
             onClick={() => handleIconClick("Details are shown")}
           />
         </div>

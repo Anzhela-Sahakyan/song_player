@@ -4,6 +4,7 @@ import { songs } from "../../data";
 import { useMemo, useState } from "react";
 import { ESortOption } from "../../types/filterTypes";
 import filterSongList from "../../utils/sortUtils";
+import AddSongBtn from "../songUpload/addSongBtn/AddSongBtn";
 
 export default function MusicPlayer() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,6 +29,7 @@ export default function MusicPlayer() {
         sort={sort}
       />
       <SongList songList={filteredSongList} />
+      <AddSongBtn />
     </div>
   );
 }
