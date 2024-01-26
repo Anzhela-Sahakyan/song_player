@@ -7,4 +7,6 @@
   --row-hover-color: #ccdbbe;
 }
 
-/* border-color: var(--main-color) */
+* {
+  outline-color: var(--hover-color);
+}

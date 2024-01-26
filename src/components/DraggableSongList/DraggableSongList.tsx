@@ -36,7 +36,7 @@ export const DraggableList = ({
     const secondElement = isSourceComesBeforeDestination
       ? songList[source.index]
       : songList[destination.index];
-    debugger;
+    // Todo birefly explain what do the next lines do
     const newList = [
       ...songList.slice(0, smallestIndex),
       firstElement,
