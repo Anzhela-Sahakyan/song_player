@@ -22,3 +22,17 @@
   flex-direction: row;
   gap: 10px;
 }
+
+@media screen and (max-width: 740px) {
+  .header {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header_sort_search,
+  .header_btns {
+    flex-direction: column;
+  }
+}
