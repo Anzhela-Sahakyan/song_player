@@ -62,6 +62,14 @@ export default function MusicUploadForm() {
           Uploading {uploadProgress}%
         </div>
       )}
+      {uploadProgress > 0 && (
+        <div className={styles.progressBarContainer}>
+          <div
+            className={styles.progressBar}
+            style={{ width: `${uploadProgress}%` }}
+          ></div>
+        </div>
+      )}
     </div>
   );
 }
