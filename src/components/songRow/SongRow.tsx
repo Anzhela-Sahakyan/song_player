@@ -39,10 +39,7 @@ export default function SongRow({ song }: { song: ISong }) {
             styles.song_row_items
           )}
         >
-          <DragIndicatorIcon
-            className={styles.icon}
-            onClick={() => handleIconClick("Drag Icon clicked")}
-          />
+          <DragIndicatorIcon className={styles.icon} />
           <PlayArrowIcon
             className={styles.icon}
             onClick={() => handleIconClick(" Play Icon clicked")}

@@ -13,7 +13,7 @@ export default function AddSongBtn() {
       <button className={styles.addBtn} onClick={handleAddButtonClick}>
         Add new song
       </button>
-      <div className={styles.addForm}>{showForm && <MusicUploadForm />}</div>
+      <div>{showForm && <MusicUploadForm />}</div>
     </div>
   );
 }
