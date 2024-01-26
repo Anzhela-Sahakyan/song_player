@@ -29,3 +29,20 @@
   color: var(--font--color);
   font-weight: bold;
 }
+
+@media screen and (max-width: 740px) {
+  .first_empty,
+  .last_empty {
+    display: none;
+  }
+  .song_name,
+  .artist_name {
+    flex: 2;
+    font-size: 15px;
+    justify-content: center;
+  }
+  .track_number {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -57,3 +57,24 @@
   justify-content: center;
   margin: 5px;
 }
+
+@media screen and (max-width: 740px) {
+  .song_row .icon,
+  .right_side_icons,
+  .drag_play_icons {
+    display: none;
+  }
+
+  .song_row .song_name,
+  .artist_name {
+    font-size: 13px;
+    padding: 3px;
+    flex: 2;
+    justify-content: center;
+  }
+
+  .track_number {
+    justify-content: center;
+    flex: 1;
+  }
+}
