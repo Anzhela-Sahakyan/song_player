@@ -19,7 +19,7 @@ export default function Header({
   sort,
 }: HeaderProps) {
   return (
-    <div className={styles.header}>
+    <div data-testid="header" className={styles.header}>
       <div className={styles.header_btns}>
         <PlayAllButton />
         <AddAllButton />
