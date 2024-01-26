@@ -36,15 +36,15 @@ export const DraggableList = ({
     const secondElement = isSourceComesBeforeDestination
       ? songList[source.index]
       : songList[destination.index];
-    // Todo birefly explain what do the next lines do
+
     // Using .slice method a new array is created containing elements up to but not including the element at the smallestIndex.
     // Then, firstElement is inserted into the new list.
     // The firstElement is either the item being dragged or the item at the destination position.
-    // After inserting the firstElement, the elements between the smallestIndex and biggestIndex are being inserted to the new list.
+    // After inserting the firstElement, the elements between the smallestIndex and biggestIndex are inserted into the new list.
     // These are the elements between the source and the destination.
-    // After them, secondElement is being inserted. The secondElement is the other one of the two utems being swapped (dragged item or the destination item.)
+    // After them, secondElement is being inserted. The secondElement is the other one of the two items being swapped (dragged item or the destination item.)
     // The last .slice method adds the remaining items to the new list,  starting after biggestIndex.
-    // If the biggestItem is the last item in the list, it adds an empty array, otherwise it adds the remaining items after biggestItem.
+    // If the biggestItem is the last item in the list, it adds an empty array, otherwise, it adds the remaining items after biggestItem.
     // Finally, songList is updated with the newly created list with the help of setSongList function.
     const newList = [
       ...songList.slice(0, smallestIndex),

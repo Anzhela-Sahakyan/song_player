@@ -9,7 +9,7 @@ interface IUseFiltersArgs {
 export default function filterSongList({ filters, songList }: IUseFiltersArgs) {
   const filteredList = songList.filter(
     (song) =>
-      song.songName.toUpperCase().includes(filters.searchQuery.toUpperCase()) || // to do create function for checking includes
+      song.songName.toUpperCase().includes(filters.searchQuery.toUpperCase()) ||
       song.artistName.toUpperCase().includes(filters.searchQuery.toUpperCase())
   );
 
