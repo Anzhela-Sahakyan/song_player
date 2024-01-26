@@ -1,3 +1,7 @@
+.song_list {
+  position: relative;
+}
+
 .songlist_title {
   display: flex;
   flex-direction: row;

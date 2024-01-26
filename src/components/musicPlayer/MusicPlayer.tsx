@@ -1,11 +1,12 @@
 import Header from "../header/Header";
 import SongList from "../songList/SongList";
-import { songs } from "../../data";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ESortOption } from "../../types/filterTypes";
 import filterSongList from "../../utils/sortUtils";
 import AddSongBtn from "../musicUpload/addSongBtn/AddSongBtn";
 import ISong from "../../types/songTypes";
+import { useSongList } from "../hooks/useSongList";
+import { Loader } from "../loader/Loader";
 
 enum SortMode {
   ManualDragSort,
@@ -19,11 +20,16 @@ export default function MusicPlayer() {
   // State for sorting, it is initialized with ascending order.
   const [sort, setSort] = useState(ESortOption.TrackNumberAsc);
 
-  // State for displaying and updating the list of songs. It is initialized with the imported songs data
-  const [songList, setSongList] = useState(songs);
+  // State for displaying and updating the list of songs. It will be set with the value of fetchedSongList in useEffect below.
+  const [songList, setSongList] = useState<ISong[]>([]);
 
   // State for tracking the current sorting mode. It is initialized as AutoSort, meaning being sorted with the button and not drag-and-drop.
   const [sortMode, setSortMode] = useState(SortMode.AutoSort);
+
+  // Songs are fetched here
+  const { songList: fetchedSongList, isLoading } = useSongList();
+
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // useMemo hook is used to optimize the performance and avoid unnecessary re-renderings.
   // Inside useMemo an imported filterSongList function is called which is used to filter the song list based on
@@ -55,8 +61,14 @@ export default function MusicPlayer() {
     setSongList(songList);
   };
 
+  useEffect(() => {
+    setSongList(fetchedSongList);
+  }, [ fetchedSongList ]);
+
   return (
-    <div>
+    <div ref={containerRef}>
+      {isLoading && <Loader parent={containerRef} />}
+      {/* <Loader parent={containerRef}/> */}
       <Header
         searchQuery={searchQuery}
         setSearchQuery={handleSearchQueryChange}

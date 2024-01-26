@@ -34,7 +34,7 @@ export default function SongRow({ song }: { song: ISong }) {
     <div>
       <div
         className={combineClasses(styles.song_row)}
-        role="listItem"
+        role="listitem"
         aria-label={`${songName} by ${artistName}`}
       >
         <div
