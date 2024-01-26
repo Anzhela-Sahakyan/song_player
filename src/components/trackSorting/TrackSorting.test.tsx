@@ -1,8 +1,7 @@
-import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import TrackSorting from "./TrackSorting"; // Adjust the import path as needed
-import { ESortOption } from "../../types/filterTypes"; // Adjust the import path as needed
+import TrackSorting from "./TrackSorting";
+import { ESortOption } from "../../types/filterTypes";
 
 describe("TrackSorting Component", () => {
   test("it should toggle sort order on click", () => {
