@@ -11,16 +11,29 @@ interface TrackSortingProps {
 }
 
 export default function TrackSorting({ setSort, sort }: TrackSortingProps) {
+  const isAscending = sort === ESortOption.TrackNumberAsc;
+
+  const handleSortChange = () => {
+    setSort(
+      isAscending ? ESortOption.TrackNumberDes : ESortOption.TrackNumberAsc
+    );
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter") {
+      handleSortChange();
+    }
+  };
   return (
     <div
-      onClick={() =>
-        setSort(
-          sort === ESortOption.TrackNumberAsc
-            ? ESortOption.TrackNumberDes
-            : ESortOption.TrackNumberAsc
-        )
-      }
+      tabIndex={0}
+      onClick={handleSortChange}
+      onKeyDown={handleKeyDown}
       className={styles.sort}
+      aria-label={`Sort by track number, currently sorted ${
+        isAscending ? "ascending" : "descending"
+      }`}
+      aria-pressed={isAscending}
     >
       <SwapVertIcon />
       Track Number
