@@ -1,4 +1,4 @@
-import { render, fireEvent, screen, waitFor } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import MusicPlayer from "./MusicPlayer";
 import { songs } from "../../data";
 
