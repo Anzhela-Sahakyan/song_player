@@ -32,17 +32,27 @@ export default function SongRow({ song }: { song: ISong }) {
 
   return (
     <div>
-      <div className={combineClasses(styles.song_row)}>
+      <div
+        className={combineClasses(styles.song_row)}
+        role="listItem"
+        aria-label={`${songName} by ${artistName}`}
+      >
         <div
           className={combineClasses(
             styles.drag_play_icons,
             styles.song_row_items
           )}
         >
-          <DragIndicatorIcon className={styles.icon} />
+          <DragIndicatorIcon className={styles.icon} aria-label="Swap songs" />
           <PlayArrowIcon
             className={styles.icon}
             onClick={() => handleIconClick(" Play Icon clicked")}
+            aria-label="Play song"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                handleIconClick("Play Icon clicked");
+            }}
           />
         </div>
         <div
@@ -69,18 +79,42 @@ export default function SongRow({ song }: { song: ISong }) {
           <FavoriteIcon
             className={styles.icon}
             onClick={() => handleIconClick("Added to favourits")}
+            aria-label="Add to favorites"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                handleIconClick("Added to favorites");
+            }}
           />
           <DoneIcon
             className={styles.icon}
             onClick={() => handleIconClick(" The song is selected")}
+            aria-label="Select song"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                handleIconClick(" The song is selected");
+            }}
           />
           <IoMdShareAlt
             className={styles.icon}
             onClick={() => handleIconClick(" The song is shared")}
+            aria-label="Share song"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                handleIconClick(" The song is shared");
+            }}
           />
           <ArrowDropDownIcon
             className={styles.icon}
             onClick={() => handleIconClick("Details are shown")}
+            aria-label="Show details"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                handleIconClick("Details are shown");
+            }}
           />
         </div>
       </div>
