@@ -4,11 +4,26 @@ import styles from "./musicUploadForm.module.css";
 export default function MusicUploadForm() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
     setSelectedFile(file);
+    setUploadError(null);
+
+    if (!file) {
+      setUploadError("File is missing. Please choose a new file");
+      return;
+    }
+
+    const validFileTypes = ["audio/mpeg", "audio/wav"];
+    if (!validFileTypes.includes(file.type)) {
+      setUploadError("Invalid file type. Please select a .mp3 or .wav file");
+      setSelectedFile(null);
+      return;
+    }
   };
 
   const handleUpload = () => {
@@ -70,6 +85,7 @@ export default function MusicUploadForm() {
           ></div>
         </div>
       )}
+      {uploadError && <div className={styles.errorMsg}>{uploadError} </div>}
     </div>
   );
 }
